@@ -1,23 +1,25 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="utf-8">
-  </head>
-  <body>
-    <p>Welcome to the chat app.</p>
 
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-      var socket = io();
+<head>
+  <meta charset="utf-8">
+</head>
 
-      socket.on('connect', () => {
-        console.log('Connected to server.');
-      });
-      socket.on('disconnect', () => {
-        console.log('Disconnected from server.');
-      });
+<body>
+  <p>Welcome to the chat app</p>
+  <ol id="messages">
 
-    </script>
-  </body>
+  </ol>
+
+  <form id="message-form">
+    <input name="message" type="text" placeholder="Type a message..."/>
+    <button>Send</button>
+
+  </form>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/libs/jquery.min.js"></script>
+  <script src="/js/index.js"></script>
+</body>
 
 </html>
